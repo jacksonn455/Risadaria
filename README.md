@@ -1,4 +1,4 @@
-API criada para a dashboard do NOC
+API criada em node JS
 ===============================================
 
 - Implementação de uma API em node com banco de dados mongo
