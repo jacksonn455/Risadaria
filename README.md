@@ -8,6 +8,7 @@ API criada para a dashboard do NOC
 - Rodar o servidor automaticamente: npm install -g nodemon
 - Banco de dados: npm install --save mongodb
 - tradutor de dados do banco de dados para objetos javascript: npm install --save mongoose
+- Segurança JWT para usuários
 - Como instalar o projeto baixado: npm install
 - Como rodar: nodemon app.js
 
