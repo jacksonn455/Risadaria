@@ -37,7 +37,6 @@ Bootstrap para deixar responsivo e padronizar os componentes assim seguindo as b
 Google fonts: biblioteca utilizada para modificar as fontes
 Acessibilidade web: Técnicas que servem para ajudar usuários com deficiencia visual assim deixando o projeto mais inclusivo
 Javascript: manipular os elementos de pagina e validar os campos
---------------------
 
 ## Autor
 
