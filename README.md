@@ -38,6 +38,22 @@ Google fonts: biblioteca utilizada para modificar as fontes
 Acessibilidade web: Técnicas que servem para ajudar usuários com deficiencia visual assim deixando o projeto mais inclusivo
 Javascript: manipular os elementos de pagina e validar os campos
 
+  Login:
+=====================
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/login.png)
+
+  Register:
+=====================
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/registro.png)
+
+  Home:
+=====================
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/home.png)
+
+   Nova-Piada:
+=====================
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/nova-piada.png)
+
 ## Autor
 
  | [<img src="https://avatars1.githubusercontent.com/u/46221221?s=460&u=0d161e390cdad66e925f3d52cece6c3e65a23eb2&v=4" width=115><br><sub>@jacksonn455</sub>](https://github.com/jacksonn455) |
