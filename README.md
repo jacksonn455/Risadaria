@@ -7,9 +7,13 @@ Trello com a metodologia Scrum para gerenciamento do projeto.
 
 - Back-End: 
 API utilizando Nodejs + Express + Mongodb
+
 Modelagem de banco de dados utilizando mongoose
+
 Criptografia de campos sensíveis utilizando bcrypt
+
 Autenticação de usuários utilizando jwt (jsonwebtoken)
+
 Gerenciando variáveis ambiente utilizando .env
 
 Para rodar a aplicação utilize o comando: nodemon -r dotenv/config .\app.js
@@ -44,14 +48,19 @@ body JSON: {
 	"email":"jacksonmagnabosco455@hotmail.com",
 	"text":"testando a caixa de texot"
 }
+
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/criar-piada.png)
  
  - Mongo:
   ![](https://github.com/jacksonn455/Triider/blob/main/public/images/mongo.png)
 
 - Front-end: 
 Bootstrap para deixar responsivo e padronizar os componentes assim seguindo as boas práticas do desenvolvimento HTML5 e CSS
+
 Google fonts: biblioteca utilizada para modificar as fontes
+
 Acessibilidade web: Técnicas que servem para ajudar usuários com deficiencia visual assim deixando o projeto mais inclusivo
+
 Javascript: manipular os elementos de pagina e validar os campos
 
 Login:
