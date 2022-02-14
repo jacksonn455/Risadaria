@@ -15,6 +15,18 @@ routes.get("/", async ({res}) => {
     res.render("index");
   });
 
+  routes.get("/register", async ({res}) => {
+    res.render("registro");
+  });
+
+  routes.get("/home", async ({res}) => {
+    res.render("home");
+  });
+
+  routes.get("/novapiada", async ({res}) => {
+    res.render("nova-piada");
+  });
+
 routes.post("/user/register", UserController.create);
 routes.post("/user/login", auth, UserController.login);
 routes.post("/jokes/create", NovaPiadaController.create);
