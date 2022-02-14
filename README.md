@@ -19,7 +19,7 @@ Para rodar a aplicação utilize o comando: nodemon -r dotenv/config .\app.js
 http://localhost:7001/user/register
 
 body JSON: {
-	"username":"jacksonmagnabosco@hotmail.com",
+	"email":"jacksonmagnabosco@hotmail.com",
 	"password":"teste123"
 }
 
@@ -31,7 +31,7 @@ passando no header a authorização JWT
 ex: auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDk5ZjVhZDQ5MzQ5MjNmMDFiOTgxZCIsImlhdCI6MTY0NDc5ODkwNiwiZXhwIjoxNjQ1NDAzNzA2fQ._zRPhDL5_OlYFv4aZ-i_YTlbFCbCQDmcqW76rRL_dnM
 
 body JSON: {
-	"username":"jacksonmagnabosco@hotmail.com",
+	"email":"jacksonmagnabosco@hotmail.com",
 	"password":"teste123"
 }
 
