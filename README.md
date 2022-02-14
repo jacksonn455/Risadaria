@@ -35,6 +35,9 @@ body JSON: {
 }
 
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/login-in.png)
+ 
+ - Mongo:
+  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/mongo.png)
 
 - Front-end: 
 Bootstrap para deixar responsivo e padronizar os componentes assim seguindo as boas práticas do desenvolvimento HTML5 e CSS
