@@ -44,6 +44,8 @@ body JSON: {
 	"email":"jacksonmagnabosco455@hotmail.com",
 	"text":"testando a caixa de texot"
 }
+
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/criar-piada.png)
  
  - Mongo:
   ![](https://github.com/jacksonn455/Triider/blob/main/public/images/mongo.png)
