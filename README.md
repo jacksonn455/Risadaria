@@ -3,6 +3,7 @@ TRIIDER
 
 - Metodologia: 
 Trello com a metodologia Scrum para gerenciamento do projeto.
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/trello.png)
 
 - Back-End: 
 API utilizando Nodejs + Express + Mongodb
