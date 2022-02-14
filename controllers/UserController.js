@@ -1,78 +1,45 @@
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+const Users = require('../models/user');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
-const User = require("../models/User");
+const createUserToken = (userId) => {
+    return jwt.sign({ id: userId }, 'triider2022', { expiresIn: '7d' });
+}
 
 module.exports = {
   async create(req, res) {
-    const { username, password: unhashedPassword } = req.body;
-    const password = await bcrypt.hash(unhashedPassword, 10);
+    const { username, password } = req.body;
+    if (!username || !password) return res.status(400).send({ error: 'Dados insuficientes!' });
 
     try {
-      if (!username || typeof username !== "string") {
-        return res.json({ error: "Usuário inválido." });
-      }
+        if (await Users.findOne({ username })) return res.status(400).send({ error: 'Usuário já registrado!'});
 
-      if (!unhashedPassword || typeof unhashedPassword !== "string") {
-        return res.json({ error: "Senha inválida." });
-      }
-
-      if (unhashedPassword.length < 5) {
-        return res.json({
-          error: "Senha muito pequena. Deve ter no mínimo 6 caracteres",
-        });
-      }
-
-      const user = await User.create({
-        username,
-        password,
-      });
-
-      res.status(200).json({ message: "Usuário criado com sucesso!" });
-    } catch (err) {
-      if (err.code === 11000) {
-        return res.status(400).json({ error: "Usuário já existe." });
-      }
-      return res.status(500).json({ error: err.message });
+        const user = await Users.create(req.body);
+        user.password = undefined;
+        return res.status(201).send({user, token: createUserToken(user.id)});
+    }
+    catch (err) {
+      return res.status(500).send({ error: 'Erro ao buscar usuário!' });
     }
   },
 
   async login(req, res) {
     const { username, password } = req.body;
 
-    const user = await User.findOne({ username }).lean();
+    if (!username || !password) return res.status(400).send({ error: 'Dados insuficientes!' });
 
-    if (!user) {
-      return res.status(400).json({ error: "Usuário ou senha inválidos." });
+    try {
+        const user = await Users.findOne({ username }).select('+password');
+        if (!user) return res.status(400).send({ error: 'Usuário não registrado!' });
+
+        const pass_ok = await bcrypt.compare(password, user.password);
+
+        if(!pass_ok) return res.status(400).send({ error: 'Erro ao autenticar usuário!' });
+
+        user.password = undefined;
+        return res.status(201).send({user, token: createUserToken(user.id)});
     }
-
-    if (await bcrypt.compare(password, user.password)) {
-      const token = jwt.sign(
-        { id: user._id, username: user.username },
-        process.env.JWT_SECRET
-      );
-
-      res.cookie("jwt", token, {
-        sameSite: "strict",
-        expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
-        httpOnly: true,
-        // secure: true
-      });
-
-      return res.status(200).json({ token });
-    }
-
-    res.status(400).json({ error: "Usuário ou senha inválidos." });
-  },
-
-  async logout(req, res) {
-    const token = req.cookies.jwt;
-    if (token) {
-      return res
-        .status(200)
-        .clearCookie("jwt")
-        .json({ message: "Logout efetuado com sucesso." });
-    }
-    return res.status(500).json({ error: "Erro desconhecido." });
-  },
+    catch (err) {
+      return res.status(500).send({ error: 'Erro ao buscar usuário!' });
+    }}
 };

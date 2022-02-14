@@ -1,13 +1,7 @@
-//Criando o container do banco
-//docker run --name mongo -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=b4nc05qu4d4p mongo:latest
-
 const mongoose = require("mongoose");
-const DB_ADDR = process.env.DB_ADDR || "localhost";
-const DB_USER = process.env.DB_USER || "root";
-const DB_PASS = process.env.DB_PASS || "b4nc05qu4d4p";
-const CON = `mongodb://${DB_USER}:${DB_PASS}@${DB_ADDR}:27017`;
+const { DB_ADDR, DB_USER, DB_PASS} = process.env;
+const CON = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_ADDR}.czbld.mongodb.net/test`;
 
-//conexão com o banco
 var connMongo = mongoose
   .connect(CON, {
     useNewUrlParser: true,

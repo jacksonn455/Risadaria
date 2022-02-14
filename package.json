@@ -1,5 +1,5 @@
 {
-  "name": "api-node",
+  "name": "triider",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch ./ app.js"
   },
-  "author": "",
+  "author": "Jackson Felipe Magnabosco",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",

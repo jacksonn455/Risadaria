@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/stylesheets/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,400,500,700,900" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+</head>
+
+<body>
+    <div id="login-container">
+        <ul id="mensagens-erro"></ul>
+        <form id="form-login" name="form1">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="off" required>
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+            <label for="ConfirmarPassword">Confirmar Senha</label>
+            <input type="password" name="ConfirmarPassword" id="ConfirmarPassword" placeholder="Confirme a sua senha" required>
+            <a href="index.html" id="forgot-pass">Voltar</a>
+            <button id="registrar">Registrar</button>
+        </form>
+    </div>
+    <script src="../public/js/registro.js"></script>
+</body>
