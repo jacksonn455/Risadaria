@@ -8,28 +8,28 @@ const createUserToken = (userId) => {
 
 module.exports = {
   async create(req, res) {
-    const { username, password } = req.body;
-    if (!username || !password) return res.status(400).send({ error: 'Dados insuficientes!' });
+    const { email, password } = req.body;
+    if (!email || !password) return res.status(400).send({ error: 'Dados insuficientes!' });
 
     try {
-        if (await Users.findOne({ username })) return res.status(400).send({ error: 'Usuário já registrado!'});
+        if (await Users.findOne({ email })) return res.status(400).send({ error: 'Usuário já registrado!'});
 
         const user = await Users.create(req.body);
         user.password = undefined;
         return res.status(201).send({user, token: createUserToken(user.id)});
     }
     catch (err) {
-      return res.status(500).send({ error: 'Erro ao buscar usuário!' });
+      return res.status(500).send({ error: err });
     }
   },
 
   async login(req, res) {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
-    if (!username || !password) return res.status(400).send({ error: 'Dados insuficientes!' });
+    if (!email || !password) return res.status(400).send({ error: 'Dados insuficientes!' });
 
     try {
-        const user = await Users.findOne({ username }).select('+password');
+        const user = await Users.findOne({ email }).select('+password');
         if (!user) return res.status(400).send({ error: 'Usuário não registrado!' });
 
         const pass_ok = await bcrypt.compare(password, user.password);
