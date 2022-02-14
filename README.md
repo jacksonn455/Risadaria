@@ -1,4 +1,4 @@
-PROVA TÉCNICA TRIIDER
+TRIIDER
 ===============================================
 
 - Metodologia
