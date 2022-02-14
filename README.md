@@ -1,10 +1,10 @@
 TRIIDER
 ===============================================
 
-- Metodologia
+- Metodologia: 
 Trello com a metodologia Scrum para gerenciamento do projeto.
 
-- Back-End
+- Back-End: 
 API utilizando Nodejs + Express + Mongodb
 Modelagem de banco de dados utilizando mongoose
 Criptografia de campos sensíveis utilizando bcrypt
@@ -32,7 +32,7 @@ body JSON: {
 	"password":"teste123"
 }
 
-- Front-end
+- Front-end: 
 Bootstrap para deixar responsivo e padronizar os componentes assim seguindo as boas práticas do desenvolvimento HTML5 e CSS
 Google fonts: biblioteca utilizada para modificar as fontes
 Acessibilidade web: Técnicas que servem para ajudar usuários com deficiencia visual assim deixando o projeto mais inclusivo
