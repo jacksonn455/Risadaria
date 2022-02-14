@@ -20,7 +20,7 @@ Para rodar a aplicação utilize o comando: nodemon -r dotenv/config .\app.js
 
 - Rotas:
 
-http://localhost:7001/user/register
+POST: http://localhost:7001/user/register
 
 body JSON: {
 	"email":"jacksonmagnabosco@hotmail.com",
@@ -29,7 +29,7 @@ body JSON: {
 
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/register-in.png)
 
-http://localhost:7001/user/login
+POST: http://localhost:7001/user/login
 
 passando no header a authorização JWT
 ex: auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMDk5ZjVhZDQ5MzQ5MjNmMDFiOTgxZCIsImlhdCI6MTY0NDc5ODkwNiwiZXhwIjoxNjQ1NDAzNzA2fQ._zRPhDL5_OlYFv4aZ-i_YTlbFCbCQDmcqW76rRL_dnM
@@ -41,7 +41,7 @@ body JSON: {
 
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/login-in.png)
 
- http://localhost:7001/jokes/create
+ POST: http://localhost:7001/jokes/create
 
  body JSON: {
 	"name":"jackson",
@@ -65,18 +65,22 @@ Javascript: manipular os elementos de pagina e validar os campos
 
 Login:
 =====================
+GET: http://localhost:7001/
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/login.png)
 
 Register:
 =====================
+GET: http://localhost:7001/register
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/registro.png)
 
 Home:
 =====================
+GET: http://localhost:7001/home
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/home.png)
 
 Nova-Piada:
 =====================
+GET: http://localhost:7001/novapiada
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/nova-piada.png)
 
 ## Autor
