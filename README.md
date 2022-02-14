@@ -36,6 +36,14 @@ body JSON: {
 }
 
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/login-in.png)
+
+ http://localhost:7001/jokes/create
+
+ body JSON: {
+	"name":"jackson",
+	"email":"jacksonmagnabosco455@hotmail.com",
+	"text":"testando a caixa de texot"
+}
  
  - Mongo:
   ![](https://github.com/jacksonn455/Triider/blob/main/public/images/mongo.png)
