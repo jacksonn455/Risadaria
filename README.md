@@ -22,6 +22,8 @@ body JSON: {
 	"password":"teste123"
 }
 
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/register-in.png)
+
 http://localhost:7001/user/login
 
 passando no header a authorização JWT
@@ -31,6 +33,8 @@ body JSON: {
 	"username":"jacksonmagnabosco@hotmail.com",
 	"password":"teste123"
 }
+
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/login-in.png)
 
 - Front-end: 
 Bootstrap para deixar responsivo e padronizar os componentes assim seguindo as boas práticas do desenvolvimento HTML5 e CSS
