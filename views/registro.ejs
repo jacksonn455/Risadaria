@@ -14,13 +14,11 @@
 <body>
     <div id="login-container">
         <ul id="mensagens-erro"></ul>
-        <form id="form-login" name="form1">
+        <form id="form-login" name="form1" action="/user/register" method="post">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="off" required>
             <label for="password">Senha</label>
             <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
-            <label for="ConfirmarPassword">Confirmar Senha</label>
-            <input type="password" name="ConfirmarPassword" id="ConfirmarPassword" placeholder="Confirme a sua senha" required>
             <a href="/" id="forgot-pass">Voltar</a>
             <button id="registrar">Registrar</button>
         </form>
