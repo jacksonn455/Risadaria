@@ -25,6 +25,14 @@ body {
   background-position-y: -150px;
 }
 
+.piada{
+  margin-top: 20px;
+}
+
+.piadaBaixa{
+  margin-bottom: 20px;
+}
+
 /* form */
 #main-container {
   width: 500px;

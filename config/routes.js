@@ -2,7 +2,8 @@ const express = require("express");
 const routes = express();
 routes.use(express.json());
 const auth = require('../middlewares/auth');
-const path = require('path')
+const path = require('path');
+const novaPiada = require('../models/nova-piada')
 
 routes.set("view engine", "ejs");
 routes.set('views', path.join(__dirname, '../views'));
@@ -25,6 +26,15 @@ routes.get("/", async ({res}) => {
 
   routes.get("/novapiada", async ({res}) => {
     res.render("nova-piada");
+  });
+
+  routes.get("/piadas", async (req, res) => {
+    try {
+      const testePiada = await novaPiada.find({});
+      res.render("piadas", {testePiada:testePiada});;
+    } catch (e) {
+      res.status(500).send({message: 'Falha ao carregar as piadas.'});
+    }
   });
 
 routes.post("/user/register", UserController.create);

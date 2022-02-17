@@ -6,13 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Piadas</title>
   <link rel="stylesheet" href="/stylesheets/piada.css">
+  <link rel="stylesheet" href="/stylesheets/styles.css">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,400,500,700,900" rel="stylesheet" />
 </head>
 <body>
-  <div id="main-container">
-    
+  <style>
+    .teste {
+      height: 300px;
+      overflow-y: scroll;
+    }
+  </style>
+  <div id="main-container">      
+      <% for (let item of testePiada) {%>
+        <div class="col-9">
+          <div class="principal-texto"><h3 class="banner__titulo">Nome:</h3></div>
+          <div class="principal-texto"><h4><%= item.name %></h4></div><br>
+          <div class="principal-texto"><h3 class="banner__titulo">Email:</h3></div>
+          <div class="principal-texto"><h4><%= item.email %></h4></div><br><br>
+          <div class="principal-texto"><h3 class="banner__titulo">Piada: </h3><h4><%= item.text %></h4></div><br><br>
+        </div>
+      <% } %>
+    </tbody>
+  </table>  
   </div>
   <p class="error-validation template"></p>
   <script src="/js/piada.js"></script>
