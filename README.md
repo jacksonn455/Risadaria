@@ -82,6 +82,11 @@ Nova-Piada:
 =====================
 GET: http://localhost:7001/novapiada
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/nova-piada.png)
+ 
+Piadas:
+=====================
+GET: http://localhost:7001/piadas
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/piadas.png)
 
 ## Autor
 
