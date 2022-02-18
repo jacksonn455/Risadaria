@@ -67,11 +67,14 @@ routes.post("/user/login", async (req, res) => {
 
   const Users = require('../models/user')
   const user = await Users.findOne({ email })
- 
+  try {
   if(email == user.email && password == user.password){
     res.redirect("/home");
   } else {
     res.redirect("/");
+  }  
+} catch (err) {
+    console.log(err);
   }
 });
 
