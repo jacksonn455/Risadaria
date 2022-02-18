@@ -1,19 +1,27 @@
-const express = require("express");
+const express = require('express');
+const bodyparser = require('body-parser');
 const routes = express();
 routes.use(express.json());
 const auth = require('../middlewares/auth');
 const path = require('path');
 const novaPiada = require('../models/nova-piada')
 
+routes.use(bodyparser.urlencoded({ extended: false }));
+routes.use(bodyparser.json() );
 routes.set("view engine", "ejs");
 routes.set('views', path.join(__dirname, '../views'));
 routes.use(express.static(path.join('C:/Users/jacks/Triider/public')));
 
 const UserController = require("../controllers/UserController");
 const NovaPiadaController = require("../controllers/NovaPiadaController");
+const { log } = require('console');
 
 routes.get("/", async ({res}) => {
+  try {
     res.render("index");
+  } catch (e) {
+    res.status(500).send({message: 'Falha ao carregar usuario.'});
+  }
   });
 
   routes.get("/register", async ({res}) => {
@@ -37,8 +45,23 @@ routes.get("/", async ({res}) => {
     }
   });
 
-routes.post("/user/register", UserController.create);
-routes.post("/user/login", auth, UserController.login);
+routes.post('/user/register', async (req, res) => {
+ 
+  const username = req.body.email;
+  const password = req.body.password;
+
+  const Users = require('../models/user')
+  const user = new Users({ username, password });
+ 
+  try {
+    await user.save();
+    res.redirect("/home");
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+routes.post("/user/login", UserController.login);
 routes.post("/jokes/create", NovaPiadaController.create);
 
 module.exports = routes;

@@ -8,7 +8,11 @@ const createUserToken = (userId) => {
 
 module.exports = {
   async create(req, res) {
-    const { email, password } = req.body;
+    var password = req.body.password;
+    var email = req.body.email;
+    console.log(email);
+    console.log(password);
+
     if (!email || !password) return res.status(400).send({ error: 'Dados insuficientes!' });
 
     try {
@@ -16,7 +20,7 @@ module.exports = {
 
         const user = await Users.create(req.body);
         user.password = undefined;
-        return res.status(201).send({user, token: createUserToken(user.id)});
+        return res.status(201).send({user});
     }
     catch (err) {
       return res.status(500).send({ error: err });
@@ -24,7 +28,10 @@ module.exports = {
   },
 
   async login(req, res) {
-    const { email, password } = req.body;
+    var password = req.body.password;
+    var email = req.body.email;
+    console.log(email);
+    console.log(password);
 
     if (!email || !password) return res.status(400).send({ error: 'Dados insuficientes!' });
 
@@ -37,7 +44,7 @@ module.exports = {
         if(!pass_ok) return res.status(400).send({ error: 'Erro ao autenticar usuário!' });
 
         user.password = undefined;
-        return res.status(201).send({user, token: createUserToken(user.id)});
+        return res.status(201).send({user});
     }
     catch (err) {
       return res.status(500).send({ error: 'Erro ao buscar usuário!' });

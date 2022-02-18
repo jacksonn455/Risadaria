@@ -14,13 +14,11 @@
 <body>
     <div id="login-container">
         <ul id="mensagens-erro"></ul>
-        <form id="form-login" name="form1" action="/user/register" method="post">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="off" required>
-            <label for="password">Senha</label>
-            <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+        <form id="form-login"  action="/user/register" method="post">
+            <p>Email:<input type="text" name="email" /></p>
+            <p>Senha:<input type="text" name="password" /></p>
             <a href="/" id="forgot-pass">Voltar</a>
-            <button id="registrar">Registrar</button>
+            <p><input type="submit" value="Salvar" /></p>
         </form>
     </div>
     <script src="/js/registro.js"></script>

@@ -13,11 +13,11 @@
   <div id="login-container">
   <img id="imagem-centro" src="/images/1213.jpg" alt="microfone no centro da pagina perto do campo de login">
     <ul id="mensagens-erro"></ul>
-    <form id="form-login" name="form1">
+    <form id="form-login" action="/user/login" method="post">
       <label for="email">E-mail</label>
-      <input type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="off" required>
+      <input type="email" name="email">
       <label for="password">Senha</label>
-      <input type="password" name="password" id="password" placeholder="Digite sua senha" autocomplete="off" required>
+      <input type="password" name="password">
       <a href="/register" id="forgot-pass">Registrar</a>
       <button id="logar" onclick="location.href='/home'" type="button" >Entrar</button>
     </form>
