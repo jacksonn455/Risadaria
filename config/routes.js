@@ -14,7 +14,6 @@ routes.use(express.static(path.join('C:/Users/jacks/Triider/public')));
 
 const UserController = require("../controllers/UserController");
 const NovaPiadaController = require("../controllers/NovaPiadaController");
-const { log } = require('console');
 
 routes.get("/", async ({res}) => {
   try {
@@ -76,6 +75,20 @@ routes.post("/user/login", async (req, res) => {
   }
 });
 
-routes.post("/jokes/create", NovaPiadaController.create);
+routes.post("/jokes/create", async (req, res) => {
+ 
+  const name = req.body.name;
+  const email = req.body.email;
+  const text = req.body.text;
+
+  const piada = new novaPiada({ name, email, text });
+ 
+  try {
+    await piada.save();
+    res.redirect("/piadas");
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 module.exports = routes;
