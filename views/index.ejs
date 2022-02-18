@@ -14,12 +14,10 @@
   <img id="imagem-centro" src="/images/1213.jpg" alt="microfone no centro da pagina perto do campo de login">
     <ul id="mensagens-erro"></ul>
     <form id="form-login" action="/user/login" method="post">
-      <label for="email">E-mail</label>
-      <input type="email" name="email">
-      <label for="password">Senha</label>
-      <input type="password" name="password">
+      <p>Email:<input type="text" name="email" /></p>
+      <p>Senha:<input type="text" name="password" /></p>
       <a href="/register" id="forgot-pass">Registrar</a>
-      <button id="logar" onclick="location.href='/home'" type="button" >Entrar</button>
+      <p><input type="submit" value="Entrar" /></p>
     </form>
   </div>
   <script src="/js/login.js"></script>

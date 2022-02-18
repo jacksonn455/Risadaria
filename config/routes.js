@@ -47,11 +47,11 @@ routes.get("/", async ({res}) => {
 
 routes.post('/user/register', async (req, res) => {
  
-  const username = req.body.email;
+  const email = req.body.email;
   const password = req.body.password;
 
   const Users = require('../models/user')
-  const user = new Users({ username, password });
+  const user = new Users({ email, password });
  
   try {
     await user.save();
@@ -61,7 +61,21 @@ routes.post('/user/register', async (req, res) => {
   }
 });
 
-routes.post("/user/login", UserController.login);
+routes.post("/user/login", async (req, res) => {
+ 
+  const email = req.body.email;
+  const password = req.body.password;
+
+  const Users = require('../models/user')
+  const user = await Users.findOne({ email })
+ 
+  if(email == user.email && password == user.password){
+    res.redirect("/home");
+  } else {
+    res.redirect("/");
+  }
+});
+
 routes.post("/jokes/create", NovaPiadaController.create);
 
 module.exports = routes;
