@@ -71,7 +71,7 @@ routes.post("/user/login", async (req, res) => {
   if(email == user.email && password == user.password){
     res.redirect("/home");
   } else {
-    res.redirect("/");
+
   }  
 } catch (err) {
     console.log(err);
