@@ -17,8 +17,8 @@ Autenticação de usuários utilizando jwt (jsonwebtoken)
 Gerenciando variáveis ambiente utilizando .env
 
 Para rodar a aplicação utilize o comando: 
-- npm install
-- nodemon -r dotenv/config .\app.js
+-- npm install
+-- nodemon -r dotenv/config .\app.js
 
 - Rotas:
 
