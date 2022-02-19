@@ -35,6 +35,10 @@ routes.get("/", async ({res}) => {
     res.render("nova-piada");
   });
 
+  routes.get("/error", async ({res}) => {
+    res.render("error");
+  });
+
   routes.get("/piadas", async (req, res) => {
     try {
       const testePiada = await novaPiada.find({});
@@ -71,10 +75,10 @@ routes.post("/user/login", async (req, res) => {
   if(email == user.email && password == user.password){
     res.redirect("/home");
   } else {
-
+    res.redirect("/error")
   }  
 } catch (err) {
-    console.log(err);
+  res.redirect("/error")
   }
 });
 
