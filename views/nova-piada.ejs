@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Nova piada</title>
   <link rel="stylesheet" href="/stylesheets/piada.css">
+  <link rel="stylesheet" href="/stylesheets/styles.css">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,400,500,700,900" rel="stylesheet" />
@@ -27,8 +28,12 @@
 	  <label for="text">Piada</label>
 	  <textarea id="text" name="text" rows="10" cols="58" style="border:solid 1px;" required></textarea>
 	  </div>
-      <div class="full-box botao">
-        <p><input type="submit" value="Enviar Piada" /></p>
+      <div class="half-box botao">
+        <button type="submit">Enviar piada</button>
+      </div>
+      <div class="half-box botao">
+        <button onclick="location.href='/piadas'" type="button">
+          Cancelar</button>
       </div>
     </form>
   </div>
