@@ -55,7 +55,7 @@ body JSON: {
   ![](https://github.com/jacksonn455/Triider/blob/main/public/images/mongo.png)
 
 - Front-end: 
-Bootstrap para deixar responsivo e padronizar os componentes assim seguindo as boas práticas do desenvolvimento HTML5 e CSS
+Bootstrap para deixar responsivo e padronizar os componentes assim seguindo as boas práticas do desenvolvimento EJS, CSS, Javascript
 
 Google fonts: biblioteca utilizada para modificar as fontes
 
@@ -68,11 +68,6 @@ Login:
 GET: http://localhost:7001/
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/login.png)
  
- Error:
-=====================
-GET: http://localhost:7001/error
- ![](https://github.com/jacksonn455/Triider/blob/main/public/images/error.png)
-
 Register:
 =====================
 GET: http://localhost:7001/register
@@ -92,6 +87,12 @@ Piadas:
 =====================
 GET: http://localhost:7001/piadas
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/piadas.png)
+ 
+Error:
+=====================
+GET: http://localhost:7001/error
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/error.png)
+
 
 ## Autor
 
