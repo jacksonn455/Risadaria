@@ -98,4 +98,8 @@ routes.post("/jokes/create", async (req, res) => {
   }
 });
 
+routes.use(function(req, res, next) {
+  res.status(404).send(res.render("error"));
+});
+
 module.exports = routes;
