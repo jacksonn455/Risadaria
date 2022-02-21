@@ -172,6 +172,10 @@ button:disabled {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
 }
 
+.piadaespaco{
+  margin-bottom: 5px;
+}
+
 .principal-texto{
   display: inline-block;
   margin-right: 10px;

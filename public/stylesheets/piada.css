@@ -89,6 +89,12 @@ input:focus {
   border-color: red;
 }
 
+textarea:focus {
+  outline: none !important;
+  border:1px solid red;
+  box-shadow: 0 0 2px red;
+}
+
 input[type="submit"] {
   background-color: red;
   color: #FFF;
@@ -186,6 +192,14 @@ input[type="submit"] {
 
 .likes{
   font-weight: bold;
+}
+
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 .description{
