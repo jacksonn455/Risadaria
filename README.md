@@ -68,11 +68,6 @@ Login:
 GET: http://localhost:7001/
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/login.png)
  
- Error:
-=====================
-GET: http://localhost:7001/error
- ![](https://github.com/jacksonn455/Triider/blob/main/public/images/error.png)
-
 Register:
 =====================
 GET: http://localhost:7001/register
@@ -92,6 +87,12 @@ Piadas:
 =====================
 GET: http://localhost:7001/piadas
  ![](https://github.com/jacksonn455/Triider/blob/main/public/images/piadas.png)
+ 
+Error:
+=====================
+GET: http://localhost:7001/error
+ ![](https://github.com/jacksonn455/Triider/blob/main/public/images/error.png)
+
 
 ## Autor
 
